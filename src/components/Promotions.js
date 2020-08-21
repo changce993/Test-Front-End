@@ -37,7 +37,7 @@ const Promotions = ({ promotionText }) => {
         <div className={styles.container}>
             <h2 className={styles.title}>{promotionText}</h2>
 
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form method="POST" action="https://corebiz-test.herokuapp.com/api/v1/newsletter" className={styles.form} onSubmit={handleSubmit}>
                 <div className={styles.input_component}>
                     <input ref={inputName} className={styles.input} name="name" type="text" placeholder="Digite seu nome" />
                     {errorName ? <PromoError title='Preencha com seu nome completo' /> : null}
